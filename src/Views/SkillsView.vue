@@ -42,4 +42,16 @@ import personal from '@/assets/data/PersonalData';
     justify-items: center;
     padding: 32px;
 }
+
+@media (max-width: 600px) {
+    .page-body {
+        padding: 24px 16px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px;
+        gap: 12px;
+    }
+}
 </style>

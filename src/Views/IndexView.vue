@@ -76,4 +76,25 @@ import Nav from '@/Components/Nav.vue';
     font-size: 0.9rem;
     letter-spacing: 0.04em;
 }
+
+@media (max-width: 600px) {
+    .page-body {
+        padding: 24px 16px;
+    }
+
+    .page-wrapper {
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 20px;
+    }
+
+    .personality {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    #myphoto {
+        width: 110px;
+    }
+}
 </style>

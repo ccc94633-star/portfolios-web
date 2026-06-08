@@ -21,7 +21,7 @@ defineProps({ item: Object })
     border-radius: 10px;
     border: 1px solid #e8e8e2;
     padding: 16px 12px;
-    width: 100px;
+    width: 100%;
     background: #fafaf7;
     transition: border-color 0.2s;
 }

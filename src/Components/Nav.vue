@@ -58,4 +58,16 @@ a.router-link-active {
 
 a:visited { color: #888880; }
 a:active  { color: #3d4d00; }
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 8px;
+    }
+
+    a {
+        font-size: 12px;
+        padding: 10px 4px;
+        letter-spacing: 0;
+    }
+}
 </style>

@@ -22,4 +22,10 @@ const item = computed(() => personal.portfolios.find(p => p.id === Number(route.
     margin: 0 auto;
     padding: 40px 24px;
 }
+
+@media (max-width: 600px) {
+    .page-body {
+        padding: 24px 16px;
+    }
+}
 </style>

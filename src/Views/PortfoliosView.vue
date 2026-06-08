@@ -39,13 +39,31 @@ const goToDetail = (id) => {
 }
 
 .work-container {
-    background: #fff;
-    border: 1px solid #e8e8e2;
+    background: #1a1a1a;
+    border: 1px solid #333;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 32px;
+    gap: 12px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .page-body {
+        padding: 24px 16px;
+    }
+
+    .work-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 12px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .work-container {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
