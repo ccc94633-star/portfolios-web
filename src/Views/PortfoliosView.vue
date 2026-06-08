@@ -39,10 +39,10 @@ const goToDetail = (id) => {
 }
 
 .work-container {
-    background: #1a1a1a;
-    border: 1px solid #333;
+    background: #fff;
+    border: 1px solid #e8e8e2;
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;

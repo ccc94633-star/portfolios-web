@@ -103,8 +103,8 @@ const emit = defineEmits(['view-detail'])
     font-size: 0.6rem;
     padding: 2px 8px;
     border-radius: 20px;
-    background: #c8d860cc;
-    color: #2a3600;
+    background: #edf7a9cc;
+    color: #3d5000;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
