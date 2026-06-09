@@ -16,7 +16,7 @@ import learningIcon from '@/assets/Image/icon/personality/personality-learning.s
 import sportsIcon from '@/assets/Image/icon/personality/personality-sports.svg'
 import travelIcon from '@/assets/Image/icon/personality/personality-travel.svg'
 import animalIcon from '@/assets/Image/icon/personality/personality-animal.svg'
-import helpIcon from '@/assets/Image/icon/personality/helpIcon.jpg'
+import helpIcon from '@/assets/Image/icon/personality/personality-help.svg'
 import psIcon from '@/assets/Image/icon/skills/photoshop.svg'
 import figmaIcon from '@/assets/Image/icon/skills/figma.svg'
 import rwdIcon from '@/assets/Image/icon/skills/rwd.svg'

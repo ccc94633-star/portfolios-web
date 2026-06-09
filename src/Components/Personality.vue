@@ -12,25 +12,29 @@ defineProps({ item: Object })
 <style scoped>
 .personality-item {
     border: 1px solid #e8e8e2;
-    padding: 16px 12px;
-    border-radius: 10px;
+    padding: 14px 10px 12px;
+    border-radius: 8px;
     text-align: center;
-    background: #fafaf7;
-    transition: border-color 0.2s;
+    background: #fdfdfb;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .personality-item:hover {
-    border-color: #c8d860;
+    border-color: #cbd2ad;
+    background: #f8f9f2;
+    transform: translateY(-2px);
 }
 
 img {
-    width: 72px;
-    margin-bottom: 6px;
+    display: block;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 8px;
 }
 
 .label {
     font-size: 0.82rem;
-    color: #5a5a50;
-    letter-spacing: 0.04em;
+    color: #62655d;
+    letter-spacing: 0.02em;
 }
 </style>

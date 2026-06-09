@@ -1,33 +1,6 @@
-<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80" height="80" rx="16" fill="#FFF0F5"/>
-  <rect x="1" y="1" width="78" height="78" rx="15" fill="none" stroke="#F0A0C0" stroke-width="1"/>
-
-  <!-- Heart outline -->
-  <path d="M 40,50
-           C 14,36 7,22 7,16
-           C 7,7 16,4 26,9
-           C 32,11 37,16 40,20
-           C 43,16 48,11 54,9
-           C 64,4 73,7 73,16
-           C 73,22 66,36 40,50 Z"
-        fill="none" stroke="#D4608A" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Hand upper edge: from heart tip going right -->
-  <path d="M 40,50 C 45,54 54,52 58,48 C 62,46 65,45 66,42 C 67,39 65,35 61,35"
-        fill="none" stroke="#D4608A" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Thumb protruding right -->
-  <path d="M 66,42 C 69,38 69,33 66,31 C 63,29 60,32 61,35"
-        fill="none" stroke="#D4608A" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Palm bottom curve -->
-  <path d="M 40,50 C 40,57 45,61 51,61 C 57,61 63,57 65,51 C 66,48 66,45 66,42"
-        fill="none" stroke="#D4608A" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round"/>
-
-  <text x="40" y="74" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif"
-        font-size="9" text-anchor="middle" fill="#D4608A">樂於助人</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <circle cx="40" cy="40" r="35" fill="#F2F3EA"/>
+  <path d="M40 46S28 39.5 28 31C28 26 34 23 38 28L40 30L42 28C46 23 52 26 52 31C52 39.5 40 46 40 46Z" fill="#A6B474"/>
+  <path d="M17 49L27 44C30 42.5 33 43 36 45L40 48H49C52 48 54 50 54 53H38" stroke="#62655D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 50L61 46C64 44 67 46 66 49L51 60H31L21 55" stroke="#62655D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -1,19 +1,7 @@
-<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80" height="80" rx="16" fill="#F2FBF4"/>
-  <rect x="1" y="1" width="78" height="78" rx="15" fill="none" stroke="#8ED4AA" stroke-width="1"/>
-  <!-- Back mountain (lighter) -->
-  <polyline points="44,22 62,54 26,54" fill="none" stroke="#8ED4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Front mountain (main) -->
-  <polyline points="18,54 38,18 58,54" fill="none" stroke="#2E8E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Snow cap -->
-  <polyline points="32,30 38,18 44,30" fill="none" stroke="#2E8E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="31" y1="30" x2="45" y2="30" stroke="#2E8E5A" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Ground line -->
-  <line x1="14" y1="54" x2="66" y2="54" stroke="#8ED4AA" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- Sun -->
-  <circle cx="58" cy="20" r="5" fill="none" stroke="#2E8E5A" stroke-width="1.5"/>
-  <line x1="58" y1="12" x2="58" y2="10" stroke="#2E8E5A" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="64" y1="14" x2="66" y2="12" stroke="#2E8E5A" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="66" y1="20" x2="68" y2="20" stroke="#2E8E5A" stroke-width="1.2" stroke-linecap="round"/>
-  <text x="40" y="66" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="9" text-anchor="middle" fill="#2E8E5A">熱愛運動</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <circle cx="40" cy="40" r="35" fill="#F2F3EA"/>
+  <path d="M18 57L37 23L57 57H18Z" stroke="#62655D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 34L37 23L44 35L40 33L36 37L31 34Z" fill="#A6B474"/>
+  <path d="M43 57L55 36L66 57H43Z" stroke="#A6B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="57" cy="20" r="5" stroke="#62655D" stroke-width="2"/>
 </svg>
