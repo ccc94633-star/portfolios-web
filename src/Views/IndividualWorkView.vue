@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 import IndividualWork from '@/Components/IndividualWork.vue';
 import Nav from '@/Components/Nav.vue';
-import personal from '@/assets/data/PersonalData'
+import personal from '@/assets/data/PersonalData';
 
 const route = useRoute()
 const item = computed(() => personal.portfolios.find(p => p.id === Number(route.params.id)))

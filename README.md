@@ -23,6 +23,7 @@
 專案	              檔名
 雯子的電影院	   movie-theater.png
 吉伊卡哇樂園產生器	chiikawa-generator.png
+
 吉伊卡哇猜拳	   chiikawa-rock-paper.png
 落語競賽	       rakugo-score.png
 烏薩奇體重計	   usagi-bmi.png

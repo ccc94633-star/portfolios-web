@@ -77,8 +77,8 @@ const personal = {
                 shortDesc: '來跟吉伊卡哇玩猜拳吧！',
                 tags: ['css', 'Js'],
                 desc: '跟吉伊卡哇猜拳遊戲，可以自己決定出拳，並記錄你與吉伊卡哇之間的輸贏。',
-                gitHubUrl: 'https://www.google.com',
-                demoUrl: 'https://www.google.com'
+                gitHubUrl: null,
+                demoUrl: '/skills/portfolios/chiikawa-rock-paper'
             },
 
 

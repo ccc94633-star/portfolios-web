@@ -19,10 +19,17 @@ defineProps({ item: Object })
         <p class="desc">{{ item.desc }}</p>
 
         <div class="links">
-            <a :href="item.gitHubUrl" class="link-btn github-btn" target="_blank">
+            <a v-if="item.gitHubUrl" :href="item.gitHubUrl" class="link-btn github-btn" target="_blank">
                 GitHub
             </a>
-            <a :href="item.demoUrl" class="link-btn demo-btn" target="_blank">
+            <RouterLink
+                v-if="item.demoUrl?.startsWith('/')"
+                :to="item.demoUrl"
+                class="link-btn demo-btn"
+            >
+                ↗ Demo
+            </RouterLink>
+            <a v-else-if="item.demoUrl" :href="item.demoUrl" class="link-btn demo-btn" target="_blank">
                 ↗ Demo
             </a>
         </div>
