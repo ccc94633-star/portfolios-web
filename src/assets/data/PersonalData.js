@@ -89,8 +89,8 @@ const personal = {
                 shortDesc: '動漫【朱音落語】的落語競賽分數查詢網頁',
                 tags: ['css', 'Js'],
                 desc: '查詢朱音這次落語比賽是第幾名，同時可以查詢每位參賽者的成績。',
-                gitHubUrl: 'https://www.google.com',
-                demoUrl: 'https://www.google.com'
+                gitHubUrl: null,
+                demoUrl: '/skills/portfolios/rakugo-score'
             },
 
 
@@ -101,8 +101,8 @@ const personal = {
                 shortDesc: '來測看看你是哪種體型的烏薩奇吧！',
                 tags: ['css', 'Js'],
                 desc: '一個烏薩奇風格的BMI計算機，可以測看看你是哪種體型的烏薩奇。',
-                gitHubUrl: 'https://www.google.com',
-                demoUrl: 'https://www.google.com'
+                gitHubUrl: null,
+                demoUrl: '/skills/portfolios/usagi-bmi'
             },
 
 
