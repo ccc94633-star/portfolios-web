@@ -79,8 +79,12 @@ function calculateBmi() {
       </div>
 
       <div class="image-panel">
-        <div class="image-frame">
-          <img :src="resultImage" :alt="result ? `${result.type}烏薩奇` : '烏薩奇體重計'">
+        <div class="image-frame" :class="{ 'default-frame': !result }">
+          <img
+            :src="resultImage"
+            :class="{ 'default-image': !result }"
+            :alt="result ? `${result.type}烏薩奇` : '烏薩奇體重計'"
+          >
         </div>
         <p>{{ result ? `${result.type}烏薩奇` : '準備好測量了嗎？' }}</p>
       </div>
@@ -90,10 +94,14 @@ function calculateBmi() {
 
 <style scoped>
 .bmi-page {
-  min-height: 100vh;
-  padding: 48px 24px;
-  display: grid;
-  place-items: center;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  padding: clamp(16px, 4vh, 40px) 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   color: #4d4032;
   background:
     radial-gradient(circle at 12% 18%, rgba(255, 225, 155, 0.62), transparent 27%),
@@ -102,10 +110,15 @@ function calculateBmi() {
 }
 
 .bmi-card {
-  width: min(1120px, 100%);
-  min-height: 680px;
+  width: 80vw;
+  height: 80vh;
+  height: 80dvh;
+  max-width: none;
+  max-height: none;
+  min-height: 0;
+  margin: auto;
   display: grid;
-  grid-template-columns: minmax(340px, 0.9fr) minmax(460px, 1.1fr);
+  grid-template-columns: minmax(400px, 0.95fr) minmax(520px, 1.05fr);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(86, 143, 128, 0.22);
@@ -114,35 +127,43 @@ function calculateBmi() {
 }
 
 .form-panel {
-  padding: 62px 54px;
+  min-height: 0;
+  padding: clamp(22px, 4vh, 44px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 .eyebrow {
+  max-width: 100%;
   color: #d38a43;
-  font-size: 0.72rem;
+  font-size: clamp(0.58rem, 1vw, 0.72rem);
   font-weight: 800;
-  letter-spacing: 0.22em;
+  line-height: 1.5;
+  letter-spacing: clamp(0.08em, 0.35vw, 0.22em);
+  overflow-wrap: anywhere;
 }
 
 h1 {
+  max-width: 100%;
   margin-top: 8px;
   color: #356f65;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
   line-height: 1.2;
+  white-space: nowrap;
+  letter-spacing: -0.06em;
 }
 
 .intro {
-  margin: 12px 0 30px;
+  margin: 8px 0 clamp(14px, 2.5vh, 24px);
   color: #817466;
   font-size: 0.95rem;
 }
 
 label {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: clamp(10px, 1.8vh, 16px);
 }
 
 label > span {
@@ -169,7 +190,7 @@ label > span {
 
 input {
   width: 100%;
-  min-height: 58px;
+  min-height: clamp(46px, 6.5vh, 58px);
   padding: 0 18px;
   color: #4d4032;
   background: transparent;
@@ -186,7 +207,7 @@ input {
 }
 
 button {
-  min-height: 58px;
+  min-height: clamp(46px, 6.5vh, 58px);
   margin-top: 4px;
   color: #fff;
   background: linear-gradient(135deg, #4c988a, #34766b);
@@ -206,14 +227,15 @@ button:hover {
 }
 
 .result-box {
-  min-height: 112px;
-  margin-top: 22px;
-  padding: 16px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  min-height: clamp(96px, 14vh, 126px);
+  max-height: 24%;
+  margin-top: clamp(10px, 2vh, 18px);
+  padding: clamp(10px, 1.8vh, 16px) 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
   justify-content: center;
-  gap: 8px 12px;
+  gap: clamp(2px, 0.5vh, 5px);
   color: #9a8b79;
   background: #fffaf0;
   border: 1px dashed #dec9a7;
@@ -229,21 +251,30 @@ button:hover {
 
 .result-box p {
   width: 100%;
+  margin: 0;
   font-size: 0.82rem;
+  line-height: 1.3;
 }
 
 .result-box strong {
   color: #d17737;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vh, 2.25rem);
   line-height: 1;
 }
 
 .result-box span {
+  display: block;
+  max-width: 100%;
   font-weight: 700;
+  font-size: clamp(0.82rem, 1.8vh, 1rem);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .image-panel {
-  padding: 42px;
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(28px, 5vh, 48px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +283,8 @@ button:hover {
 }
 
 .image-frame {
-  width: min(100%, 520px);
+  width: min(100%, 52vh, 560px);
+  max-height: 100%;
   aspect-ratio: 1;
   overflow: hidden;
   display: grid;
@@ -263,10 +295,27 @@ button:hover {
   box-shadow: 0 20px 44px rgba(67, 104, 92, 0.18);
 }
 
+.image-frame.default-frame {
+  width: 100%;
+  height: 68%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
 .image-frame img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.image-frame img.default-image {
+  width: 145%;
+  height: 100%;
+  max-width: none;
+  transform: translateX(-10%);
 }
 
 .image-panel > p {
@@ -279,36 +328,122 @@ button:hover {
 
 @media (max-width: 880px) {
   .bmi-card {
+    width: 88vw;
+    height: 88vh;
+    height: 88dvh;
     grid-template-columns: 1fr;
+    grid-template-rows: minmax(180px, 0.75fr) minmax(0, 1.25fr);
   }
 
   .image-panel {
     grid-row: 1;
+    padding: 20px;
   }
 
   .image-frame {
-    width: min(100%, 460px);
+    width: min(100%, 30vh, 300px);
+  }
+
+  .image-frame.default-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .image-panel > p {
+    margin-top: 10px;
+    font-size: 0.86rem;
+  }
+
+  .form-panel {
+    padding: 24px 32px;
+  }
+
+  .eyebrow,
+  .intro {
+    display: none;
+  }
+
+  h1 {
+    margin: 0 0 14px;
+    font-size: clamp(1.45rem, 5vw, 2.2rem);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    letter-spacing: -0.05em;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input,
+  button {
+    min-height: 48px;
+  }
+
+  .result-box {
+    min-height: 88px;
+    max-height: 22%;
+    margin-top: 12px;
+    padding: 10px 16px;
   }
 }
 
 @media (max-width: 560px) {
   .bmi-page {
-    padding: 18px 12px;
+    padding: 10px;
   }
 
   .bmi-card {
-    min-height: auto;
+    width: 94vw;
+    height: 94vh;
+    height: 94dvh;
     border-radius: 24px;
+    grid-template-rows: minmax(130px, 0.55fr) minmax(0, 1.45fr);
   }
 
-  .form-panel,
+  .form-panel {
+    padding: 18px 20px;
+  }
+
   .image-panel {
-    padding: 30px 22px;
+    padding: 12px;
   }
 
   .image-frame {
+    width: min(100%, 22vh, 190px);
     border-width: 6px;
     border-radius: 22px;
+  }
+
+  .image-frame.default-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .image-panel > p {
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  label > span {
+    margin-bottom: 4px;
+  }
+
+  input,
+  button {
+    min-height: 44px;
+  }
+
+  .result-box {
+    min-height: 82px;
+    max-height: 24%;
+    margin-top: 8px;
   }
 }
 </style>

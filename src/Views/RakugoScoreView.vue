@@ -66,6 +66,10 @@ const visibleStudents = computed(() => {
     <div class="header-band">落語競技大會　成績公示　令和七年度</div>
 
     <div class="container">
+      <RouterLink class="back-link" to="/skills/portfolios/4">
+        ← 返回作品介紹
+      </RouterLink>
+
       <header class="hero">
         <p class="hero-sub">Rakugo Competition Results</p>
         <h1>落語競賽<br>分數查詢</h1>
@@ -165,6 +169,26 @@ const visibleStudents = computed(() => {
   padding: 42px 0 64px;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 7px 13px;
+  color: var(--washi);
+  border: 1px solid rgba(212, 160, 23, 0.45);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--sumi);
+  background: var(--kin);
+}
+
 .hero {
   padding: 24px 0 34px;
   text-align: center;
@@ -251,6 +275,7 @@ h1 {
 
 .search-input,
 .filter-select {
+  min-width: 0;
   min-height: 44px;
   padding: 10px 14px;
   color: var(--washi);
@@ -336,6 +361,7 @@ h1 {
   margin-top: 3px;
   color: var(--washi-dim);
   font-size: 0.74rem;
+  overflow-wrap: anywhere;
 }
 
 .grade-badge {
@@ -377,14 +403,46 @@ footer {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .controls { flex-wrap: wrap; }
   .search-input { flex-basis: 100%; }
+  .filter-select { flex: 1 1 calc(50% - 5px); }
 }
 
 @media (max-width: 520px) {
   .container { width: min(100% - 20px, 980px); }
-  .player-card { gap: 10px; padding: 13px 12px; }
+  .header-band {
+    padding-inline: 10px;
+    letter-spacing: 0.18em;
+  }
+  .hero { padding-block: 32px; }
+  .controls { gap: 8px; }
+  .filter-select { flex-basis: 100%; width: 100%; }
+  .player-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 8px 10px;
+    padding: 13px 12px;
+  }
   .rank-badge { width: 34px; height: 34px; }
+  .player-info { grid-column: 2; grid-row: 1 / span 2; }
   .player-dojo { white-space: normal; }
-  .grade-badge { padding-inline: 7px; }
-  .score-num { min-width: 38px; font-size: 1.3rem; }
+  .grade-badge {
+    grid-column: 3;
+    grid-row: 2;
+    padding-inline: 7px;
+    text-align: center;
+  }
+  .score-num {
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 38px;
+    font-size: 1.3rem;
+  }
+  .no-result { padding: 36px 16px; }
+  footer { letter-spacing: 0.12em; }
+}
+
+@media (hover: none) {
+  .player-card:hover {
+    transform: none;
+  }
 }
 </style>
