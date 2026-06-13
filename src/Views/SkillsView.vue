@@ -22,20 +22,21 @@ import personal from '@/assets/data/PersonalData';
 }
 
 .page-title {
-    color: #5a5a50;
+    color: var(--color-primary-dark);
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.06em;
     padding-bottom: 10px;
     margin-bottom: 24px;
-    border-bottom: 2px solid #edf7a9;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 .skills-container {
-    background: #fff;
-    border: 1px solid #e8e8e2;
+    background: var(--color-surface);
+    border: 1px solid var(--color-primary-border);
+    border-top: 5px solid var(--color-primary);
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-card);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;

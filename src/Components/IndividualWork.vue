@@ -44,9 +44,9 @@ defineProps({ item: Object })
     margin-bottom: 16px;
     padding: 7px 14px;
     border-radius: 8px;
-    border: 1px solid #c8d860;
-    background-color: #edf7a9;
-    color: #5a7a00;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
@@ -64,9 +64,9 @@ defineProps({ item: Object })
     gap: 12px;
     align-items: center;
     border-radius: 16px;
-    border: 1px solid #e8e8e2;
-    background: #fff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
     padding: 28px 24px;
 }
 
@@ -80,12 +80,12 @@ defineProps({ item: Object })
 h3 {
     font-size: 1.15rem;
     font-weight: 500;
-    color: #3c3c38;
+    color: var(--color-primary-dark);
     letter-spacing: 0.04em;
 }
 
 .short-desc {
-    color: #888880;
+    color: var(--color-text-muted);
     font-size: 0.88rem;
     margin: 0;
 }
@@ -98,9 +98,9 @@ h3 {
 }
 
 .tag {
-    background-color: #edf7a9;
-    color: #5a7a00;
-    border: 1px solid #c8d860;
+    background-color: var(--color-accent-soft);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-accent);
     border-radius: 20px;
     padding: 3px 12px;
     font-size: 0.78rem;
@@ -109,7 +109,7 @@ h3 {
 }
 
 .desc {
-    color: #5a5a50;
+    color: var(--color-text-muted);
     font-size: 0.88rem;
     text-align: center;
     line-height: 1.7;
@@ -138,12 +138,12 @@ h3 {
 }
 
 .github-btn {
-    background-color: #24292e;
-    color: #fff;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
 }
 
 .demo-btn {
-    background-color: #1a73e8;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 </style>

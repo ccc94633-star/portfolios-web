@@ -11,18 +11,11 @@ defineProps({ item: Object })
 
 <style scoped>
 .personality-item {
-    border: 1px solid #e8e8e2;
+    border: 1px solid var(--color-border);
     padding: 14px 10px 12px;
     border-radius: 8px;
     text-align: center;
-    background: #fdfdfb;
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
-
-.personality-item:hover {
-    border-color: #cbd2ad;
-    background: #f8f9f2;
-    transform: translateY(-2px);
+    background: var(--color-primary-soft);
 }
 
 img {
@@ -34,7 +27,7 @@ img {
 
 .label {
     font-size: 0.82rem;
-    color: #62655d;
+    color: var(--color-primary-dark);
     letter-spacing: 0.02em;
 }
 </style>

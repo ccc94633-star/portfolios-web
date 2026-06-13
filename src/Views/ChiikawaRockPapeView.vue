@@ -76,6 +76,7 @@ function playGame(player) {
 </script>
 
 <template>
+    <main class="rock-paper-page">
     <h1>✦ 猜拳遊戲 ✦</h1>
     <p class="subtitle">吉伊卡哇也想贏！(๑˃ᴗ˂)ﻭ</p>
 
@@ -141,6 +142,7 @@ function playGame(player) {
         <div class="history-title">📜 對戰紀錄</div>
         <textarea id="total" ref="total" :value="history" readonly placeholder="快來出拳吧～"></textarea>
     </div>
+    </main>
 </template>
 
 <style scoped>
@@ -148,16 +150,13 @@ function playGame(player) {
     box-sizing: border-box;
 }
 
-:global(body) {
+.rock-paper-page {
+    min-height: 100vh;
+    padding: 48px 24px 64px;
     background:
         radial-gradient(circle at 8% 12%, rgba(255, 214, 225, 0.72), transparent 28%),
         radial-gradient(circle at 92% 82%, rgba(212, 236, 224, 0.72), transparent 30%),
         #fffaf5;
-}
-
-:global(#app) {
-    min-height: 100vh;
-    padding: 48px 24px 64px;
 }
 
 h1 {
@@ -476,7 +475,7 @@ h1::after {
 }
 
 @media (max-width: 820px) {
-    :global(#app) {
+    .rock-paper-page {
         padding: 34px 18px 48px;
     }
 
@@ -539,7 +538,7 @@ h1::after {
 }
 
 @media (max-width: 420px) {
-    :global(#app) {
+    .rock-paper-page {
         padding-inline: 12px;
     }
 

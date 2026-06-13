@@ -15,13 +15,14 @@ import nav from '@/assets/data/NavData.js';
 
 <style scoped>
 nav {
-    background: #f8f8f4;
-    border-bottom: 1px solid #e8e8e2;
+    background: var(--color-primary);
+    border-bottom: 3px solid var(--color-accent);
     padding: 0 24px;
 }
 
 ul {
     display: flex;
+    width: 100%;
     list-style: none;
     gap: 4px;
     max-width: 840px;
@@ -29,15 +30,19 @@ ul {
     padding: 0;
 }
 
-li { flex: 1; }
+li {
+    min-width: 0;
+    flex: 1;
+}
 
 a {
     display: block;
     text-align: center;
     padding: 14px 0;
     margin: 6px 0;
-    color: #888880;
+    color: rgba(255, 255, 255, 0.82);
     text-decoration: none;
+    white-space: nowrap;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.04em;
@@ -46,18 +51,19 @@ a {
 }
 
 a:hover {
-    color: #5a7a00;
-    background: #f5facc;
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 a.router-link-active {
-    color: #5a7a00;
-    background: #edf7a9;
-    font-weight: 500;
+    color: var(--color-primary-dark);
+    background: var(--color-accent);
+    font-weight: 600;
 }
 
-a:visited { color: #888880; }
-a:active  { color: #3d4d00; }
+a:visited { color: rgba(255, 255, 255, 0.82); }
+a.router-link-active:visited { color: var(--color-primary-dark); }
+a:active  { color: var(--color-primary-dark); }
 
 @media (max-width: 480px) {
     nav {

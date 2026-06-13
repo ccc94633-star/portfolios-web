@@ -25,14 +25,14 @@ const emit = defineEmits(['view-detail'])
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-    background: #1a1a1a;
+    background: var(--color-primary-dark);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(48, 55, 44, 0.35);
     z-index: 10;
 }
 
@@ -103,8 +103,8 @@ const emit = defineEmits(['view-detail'])
     font-size: 0.6rem;
     padding: 2px 8px;
     border-radius: 20px;
-    background: #edf7a9cc;
-    color: #3d5000;
+    background: rgba(248, 197, 50, 0.9);
+    color: var(--color-primary-dark);
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -163,5 +163,58 @@ const emit = defineEmits(['view-detail'])
 .view-btn:hover {
     background: rgba(255, 255, 255, 0.24);
     border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 600px) {
+    .work-card {
+        aspect-ratio: 16 / 11;
+    }
+
+    .work-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .card-img-wrap img,
+    .work-card:hover .card-img-wrap img {
+        filter: brightness(0.48);
+        transform: none;
+    }
+
+    .card-img-wrap::after,
+    .work-card:hover .card-img-wrap::after {
+        background: linear-gradient(
+            to top,
+            rgba(48, 55, 44, 0.96) 0%,
+            rgba(48, 55, 44, 0.62) 55%,
+            rgba(48, 55, 44, 0.12) 100%
+        );
+    }
+
+    .card-body {
+        padding: 18px;
+        gap: 7px;
+    }
+
+    .card-tags,
+    .card-desc,
+    .view-btn {
+        opacity: 1;
+        transform: none;
+    }
+
+    .card-title {
+        font-size: 1.05rem;
+    }
+
+    .card-desc {
+        font-size: 0.82rem;
+    }
+
+    .view-btn {
+        padding: 9px;
+        background: var(--color-primary);
+        border-color: rgba(255, 255, 255, 0.42);
+    }
 }
 </style>

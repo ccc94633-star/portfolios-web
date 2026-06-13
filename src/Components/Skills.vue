@@ -19,15 +19,16 @@ defineProps({ item: Object })
     gap: 8px;
     align-items: center;
     border-radius: 10px;
-    border: 1px solid #e8e8e2;
+    border: 1px solid var(--color-border);
     padding: 16px 12px;
     width: 100%;
-    background: #fafaf7;
+    background: var(--color-surface-muted);
     transition: border-color 0.2s;
 }
 
 .card:hover {
-    border-color: #c8d860;
+    border-color: var(--color-primary);
+    background: var(--color-accent-soft);
 }
 
 .skill-icon {
@@ -37,16 +38,17 @@ defineProps({ item: Object })
 .skill-name {
     font-size: 0.82rem;
     font-weight: 500;
-    color: #5a5a50;
+    color: var(--color-primary-dark);
     letter-spacing: 0.02em;
 }
 
 .star {
-    color: #ddd;
+    color: var(--color-border);
     font-size: 1rem;
 }
 
 .star.filled {
-    color: #a8c400;
+    color: var(--color-accent);
+    text-shadow: 0 1px 0 var(--color-primary-dark);
 }
 </style>
