@@ -114,8 +114,8 @@ const personal = {
                 shortDesc: '可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些。',
                 tags: ['vue.js', 'css', 'Js'],
                 desc: '除了可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些，還暗藏吉伊卡哇彩蛋在裡面。',
-                gitHubUrl: 'https://www.google.com',
-                demoUrl: 'https://www.google.com'
+                gitHubUrl: 'https://github.com/ccc94633-star/japan-tour-web',
+                demoUrl: 'https://ccc94633-star.github.io/japan-tour-web'
             },
 
 
