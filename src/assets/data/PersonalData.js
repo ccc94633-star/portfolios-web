@@ -20,6 +20,7 @@ import helpIcon from '@/assets/Image/icon/personality/personality-help.svg'
 import psIcon from '@/assets/Image/icon/skills/photoshop.svg'
 import figmaIcon from '@/assets/Image/icon/skills/figma.svg'
 import rwdIcon from '@/assets/Image/icon/skills/rwd.svg'
+import qingshuiVeterans from '@/assets/Image/portfolio/qingshuiVeterans.png'
 
 const personal = {
     name: "邱詣雯",
@@ -60,6 +61,17 @@ const personal = {
 
             {
                 id: 2,
+                image: qingshuiVeterans,
+                title: '清水眷村文化園區',
+                shortDesc: '將清水眷村的官網改版的作品',
+                tags: ['vue.js', 'css', 'Js'],
+                desc: '經過分析後，針對原網站的痛點進行改版，提升使用者閱讀體驗之餘，也加強了查找活動的篩選功能等UX功能。',
+                gitHubUrl: 'https://github.com/Digi-Pack/NCHU-11503-QingshuiArtvillage',
+                demoUrl: 'https://nchu-11503-qingshui-artvillage.dev-hub.io/'
+            },
+
+            {
+                id: 3,
                 image: chiikawaParkImg,
                 title: '吉伊卡哇樂園島民產生器網頁',
                 shortDesc: '吉伊卡哇樂園入島的申請表單',
@@ -71,7 +83,7 @@ const personal = {
 
 
             {
-                id: 3,
+                id: 4,
                 image: chiikawaRockImg,
                 title: '吉伊卡哇猜拳遊戲網頁',
                 shortDesc: '來跟吉伊卡哇玩猜拳吧！',
@@ -83,7 +95,7 @@ const personal = {
 
 
             {
-                id: 4,
+                id: 5,
                 image: rakugoImg,
                 title: '落語競賽分數查詢網頁',
                 shortDesc: '動漫【朱音落語】的落語競賽分數查詢網頁',
@@ -95,7 +107,7 @@ const personal = {
 
 
             {
-                id: 5,
+                id: 6,
                 image: usagiBmiImg,
                 title: '烏薩奇體重計網頁',
                 shortDesc: '來測看看你是哪種體型的烏薩奇吧！',
@@ -108,7 +120,7 @@ const personal = {
 
 
             {
-                id: 6,
+                id: 7,
                 image: japanTourImg,
                 title: '日本城市導覽網頁',
                 shortDesc: '可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些。',
