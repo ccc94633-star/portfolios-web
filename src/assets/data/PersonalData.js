@@ -67,7 +67,7 @@ const personal = {
                 tags: ['vue.js', 'css', 'Js'],
                 desc: '經過分析後，針對原網站的痛點進行改版，提升使用者閱讀體驗之餘，也加強了查找活動的篩選功能等UX功能。',
                 gitHubUrl: 'https://github.com/Digi-Pack/NCHU-11503-QingshuiArtvillage',
-                demoUrl: 'https://nchu-11503-qingshui-artvillage.dev-hub.io/'
+                demoUrl: 'https://nchu-11503-qingshui-qrt-village.pages.dev/'
             },
 
             {
