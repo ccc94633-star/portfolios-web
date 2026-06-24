@@ -82,9 +82,31 @@ const personal = {
                 demoUrl: 'https://portfolio-weather-card-web.vercel.app/'
             },
 
-
             {
                 id: 4,
+                image: japanTourImg,
+                title: '日本城市導覽網頁',
+                shortDesc: '可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些。',
+                tags: ['vue.js', 'css', 'Js'],
+                desc: '除了可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些，還暗藏吉伊卡哇彩蛋在裡面。',
+                gitHubUrl: 'https://github.com/ccc94633-star/japan-tour-web',
+                demoUrl: 'https://ccc94633-star.github.io/japan-tour-web'
+            },
+
+            {
+                id: 5,
+                image: chiikawaParkImg,
+                title: '吉伊卡哇樂園島民產生器網頁',
+                shortDesc: '吉伊卡哇樂園入島的申請表單',
+                tags: ['vue.js', 'css', 'Js'],
+                desc: '一個吉伊卡哇樂園入島的申請表單，您可以預覽畫面並開啟討伐模式。',
+                gitHubUrl: 'https://github.com/ccc94633-star/portfolio-chiikawa-generator-web',
+                demoUrl: 'https://ccc94633-star.github.io/portfolio-chiikawa-generator-web/'
+
+            },
+
+            {
+                id: 6,
                 image: chiikawaRockImg,
                 title: '吉伊卡哇猜拳遊戲網頁',
                 shortDesc: '來跟吉伊卡哇玩猜拳吧！',
@@ -96,7 +118,7 @@ const personal = {
 
 
             {
-                id: 5,
+                id: 7,
                 image: rakugoImg,
                 title: '落語競賽分數查詢網頁',
                 shortDesc: '動漫【朱音落語】的落語競賽分數查詢網頁',
@@ -108,7 +130,7 @@ const personal = {
 
 
             {
-                id: 6,
+                id: 8,
                 image: usagiBmiImg,
                 title: '烏薩奇體重計網頁',
                 shortDesc: '來測看看你是哪種體型的烏薩奇吧！',
@@ -117,32 +139,6 @@ const personal = {
                 gitHubUrl: null,
                 demoUrl: '/skills/portfolios/usagi-bmi'
             },
-
-
-
-            {
-                id: 7,
-                image: japanTourImg,
-                title: '日本城市導覽網頁',
-                shortDesc: '可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些。',
-                tags: ['vue.js', 'css', 'Js'],
-                desc: '除了可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些，還暗藏吉伊卡哇彩蛋在裡面。',
-                gitHubUrl: 'https://github.com/ccc94633-star/japan-tour-web',
-                demoUrl: 'https://ccc94633-star.github.io/japan-tour-web'
-            },
-
-            {
-                id: 8,
-                image: chiikawaParkImg,
-                title: '吉伊卡哇樂園島民產生器網頁',
-                shortDesc: '吉伊卡哇樂園入島的申請表單',
-                tags: ['vue.js', 'css', 'Js'],
-                desc: '一個吉伊卡哇樂園入島的申請表單，您可以預覽畫面並開啟討伐模式。',
-                gitHubUrl: 'https://github.com/ccc94633-star/portfolio-chiikawa-generator-web',
-                demoUrl: 'https://ccc94633-star.github.io/portfolio-chiikawa-generator-web/'
-
-            },
-
 
         ],
 }
