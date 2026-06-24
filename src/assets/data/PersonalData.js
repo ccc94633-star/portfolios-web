@@ -21,6 +21,7 @@ import psIcon from '@/assets/Image/icon/skills/photoshop.svg'
 import figmaIcon from '@/assets/Image/icon/skills/figma.svg'
 import rwdIcon from '@/assets/Image/icon/skills/rwd.svg'
 import qingshuiVeterans from '@/assets/Image/portfolio/qingshuiVeterans.png'
+import weatherImg from '@/assets/Image/portfolio/weather-card.png'
 
 const personal = {
     name: "邱詣雯",
@@ -32,12 +33,12 @@ const personal = {
         { icon: sportsIcon, desc: '熱衷運動' },
         { icon: travelIcon, desc: '熱愛旅遊' },
         { icon: animalIcon, desc: '喜歡動物' },
-        
+
     ],
     skills: [
         { icon: htmlIcon, name: 'HTML', rating: 4 },
         { icon: cssIcon, name: 'CSS', rating: 4 },
-        {  icon: jsIcon, name: 'JavaScript', rating: 3 },
+        { icon: jsIcon, name: 'JavaScript', rating: 3 },
         { icon: vueIcon, name: 'Vue.js', rating: 4 },
         { icon: indesignIcon, name: 'InDesign', rating: 5 },
         { icon: excelIcon, name: 'Excel', rating: 5 },
@@ -72,13 +73,13 @@ const personal = {
 
             {
                 id: 3,
-                image: chiikawaParkImg,
-                title: '吉伊卡哇樂園島民產生器網頁',
-                shortDesc: '吉伊卡哇樂園入島的申請表單',
-                tags: ['vue.js', 'css', 'Js'],
-                desc: '一個吉伊卡哇樂園入島的申請表單，您可以預覽畫面並開啟討伐模式。',
-                gitHubUrl: 'https://github.com/ccc94633-star/portfolio-chiikawa-generator-web',
-                demoUrl: 'https://ccc94633-star.github.io/portfolio-chiikawa-generator-web/'
+                image: weatherImg,
+                title: '個人風格氣象台',
+                shortDesc: '來查詢台灣各縣市的天氣吧。',
+                tags: ['vue.js', 'css', 'Js', 'API', 'Vercel'],
+                desc: '可以查詢台灣各縣市的天氣，渲染風格清新宜人。',
+                gitHubUrl: 'https://github.com/ccc94633-star/portfolio-weather-card-web',
+                demoUrl: 'https://portfolio-weather-card-web.vercel.app/'
             },
 
 
@@ -128,6 +129,18 @@ const personal = {
                 desc: '除了可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些，還暗藏吉伊卡哇彩蛋在裡面。',
                 gitHubUrl: 'https://github.com/ccc94633-star/japan-tour-web',
                 demoUrl: 'https://ccc94633-star.github.io/japan-tour-web'
+            },
+
+            {
+                id: 8,
+                image: chiikawaParkImg,
+                title: '吉伊卡哇樂園島民產生器網頁',
+                shortDesc: '吉伊卡哇樂園入島的申請表單',
+                tags: ['vue.js', 'css', 'Js'],
+                desc: '一個吉伊卡哇樂園入島的申請表單，您可以預覽畫面並開啟討伐模式。',
+                gitHubUrl: 'https://github.com/ccc94633-star/portfolio-chiikawa-generator-web',
+                demoUrl: 'https://ccc94633-star.github.io/portfolio-chiikawa-generator-web/'
+
             },
 
 
