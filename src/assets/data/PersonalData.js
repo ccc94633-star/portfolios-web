@@ -76,7 +76,7 @@ const personal = {
                 image: weatherImg,
                 title: '個人風格氣象台',
                 shortDesc: '來查詢台灣各縣市的天氣吧。',
-                tags: ['vue.js', 'css', 'Js', 'API', 'Vercel'],
+                tags: ['vue.js', 'css',  'API', 'Vercel'],
                 desc: '可以查詢台灣各縣市的天氣，渲染風格清新宜人。',
                 gitHubUrl: 'https://github.com/ccc94633-star/portfolio-weather-card-web',
                 demoUrl: 'https://portfolio-weather-card-web.vercel.app/'
