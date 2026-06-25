@@ -22,6 +22,7 @@ import figmaIcon from '@/assets/Image/icon/skills/figma.svg'
 import rwdIcon from '@/assets/Image/icon/skills/rwd.svg'
 import qingshuiVeterans from '@/assets/Image/portfolio/qingshuiVeterans.png'
 import weatherImg from '@/assets/Image/portfolio/weather-card.png'
+import workFlowImg from '@/assets/Image/portfolio/aiworkflow.png'
 
 const personal = {
     name: "邱詣雯",
@@ -73,6 +74,17 @@ const personal = {
 
             {
                 id: 3,
+                image: workFlowImg,
+                title: '我的AI工具書',
+                shortDesc: '把一個個 AI 想法，做成溫柔好用的小工具。',
+                tags: ['vue.js', 'css',  'API'],
+                desc: 'FlowSmith 是我放置 AI workflow 與 AI 小工具的作品總集。每個工具都從一個明確需求出發， 練習把輸入、Prompt、AI 回應與介面整理成完整流程。',
+                gitHubUrl: 'https://github.com/ccc94633-star/flowsmith',
+                demoUrl: 'https://ccc94633-star.github.io/flowsmith/'
+            },
+
+            {
+                id: 4,
                 image: weatherImg,
                 title: '個人風格氣象台',
                 shortDesc: '來查詢台灣各縣市的天氣吧。',
@@ -83,7 +95,7 @@ const personal = {
             },
 
             {
-                id: 4,
+                id: 5,
                 image: japanTourImg,
                 title: '日本城市導覽網頁',
                 shortDesc: '可以查詢東京、名古屋、熊本三大城市的好吃好玩有哪些。',
@@ -94,7 +106,7 @@ const personal = {
             },
 
             {
-                id: 5,
+                id: 6,
                 image: chiikawaParkImg,
                 title: '吉伊卡哇樂園島民產生器網頁',
                 shortDesc: '吉伊卡哇樂園入島的申請表單',
@@ -106,7 +118,7 @@ const personal = {
             },
 
             {
-                id: 6,
+                id: 7,
                 image: chiikawaRockImg,
                 title: '吉伊卡哇猜拳遊戲網頁',
                 shortDesc: '來跟吉伊卡哇玩猜拳吧！',
@@ -118,7 +130,7 @@ const personal = {
 
 
             {
-                id: 7,
+                id: 8,
                 image: rakugoImg,
                 title: '落語競賽分數查詢網頁',
                 shortDesc: '動漫【朱音落語】的落語競賽分數查詢網頁',
@@ -130,7 +142,7 @@ const personal = {
 
 
             {
-                id: 8,
+                id: 9,
                 image: usagiBmiImg,
                 title: '烏薩奇體重計網頁',
                 shortDesc: '來測看看你是哪種體型的烏薩奇吧！',
