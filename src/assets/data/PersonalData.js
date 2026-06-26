@@ -80,7 +80,7 @@ const personal = {
                 tags: ['vue.js', 'css',  'API'],
                 desc: 'FlowSmith 是我放置 AI workflow 與 AI 小工具的作品總集。每個工具都從一個明確需求出發， 練習把輸入、Prompt、AI 回應與介面整理成完整流程。',
                 gitHubUrl: 'https://github.com/ccc94633-star/flowsmith',
-                demoUrl: 'https://flowsmith-gules.vercel.app/#/interview-prep'
+                demoUrl: 'https://flowsmith-gules.vercel.app/'
             },
 
             {
