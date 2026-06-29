@@ -1,8 +1,8 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="API icon">
   <defs>
     <linearGradient id="api-bg" x1="18" y1="16" x2="110" y2="112" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2563EB"/>
-      <stop offset="1" stop-color="#14B8A6"/>
+      <stop offset="0" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#F59E0B"/>
     </linearGradient>
     <linearGradient id="api-chip" x1="32" y1="35" x2="96" y2="93" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F8FAFC"/>
@@ -16,15 +16,15 @@
   <circle cx="42" cy="41" r="3.5" fill="#EF4444"/>
   <circle cx="53" cy="41" r="3.5" fill="#F59E0B"/>
   <circle cx="64" cy="41" r="3.5" fill="#22C55E"/>
-  <path fill="none" stroke="#2563EB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="m44 65-9 9 9 9m40-18 9 9-9 9"/>
+  <path fill="none" stroke="#F97316" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="m44 65-9 9 9 9m40-18 9 9-9 9"/>
   <text x="64" y="82" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" text-anchor="middle">API</text>
   <path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".9" d="M23 70H12m104 0h-11M64 25V14m0 100v-11"/>
   <circle cx="12" cy="70" r="7" fill="#F8FAFC"/>
   <circle cx="116" cy="70" r="7" fill="#F8FAFC"/>
   <circle cx="64" cy="14" r="7" fill="#F8FAFC"/>
   <circle cx="64" cy="114" r="7" fill="#F8FAFC"/>
-  <circle cx="12" cy="70" r="3" fill="#2563EB"/>
-  <circle cx="116" cy="70" r="3" fill="#14B8A6"/>
-  <circle cx="64" cy="14" r="3" fill="#2563EB"/>
-  <circle cx="64" cy="114" r="3" fill="#14B8A6"/>
+  <circle cx="12" cy="70" r="3" fill="#EA580C"/>
+  <circle cx="116" cy="70" r="3" fill="#F59E0B"/>
+  <circle cx="64" cy="14" r="3" fill="#EA580C"/>
+  <circle cx="64" cy="114" r="3" fill="#F59E0B"/>
 </svg>

@@ -8,7 +8,7 @@ import homeBackground from '@/assets/Image/home-background.jpg'
 
 const introLines = [
     '把任務做到位，用創意找方法，',
-    '持續致力於使用者更好的體驗。'
+    '持續致力於創造使用者更好的體驗。'
 ]
 const parallaxY = ref(0)
 
@@ -85,22 +85,18 @@ onBeforeUnmount(() => {
     background-position: center;
     background-repeat: no-repeat;
     transform: translate3d(0, calc(var(--parallax-y) * -0.16px), 0) scale(1.08);
-    -webkit-mask-image: radial-gradient(
-        circle at center,
-        transparent 0%,
-        transparent 34%,
-        rgba(0, 0, 0, 0.18) 47%,
-        rgba(0, 0, 0, 0.82) 58%,
-        #000 70%
-    );
-    mask-image: radial-gradient(
-        circle at center,
-        transparent 0%,
-        transparent 34%,
-        rgba(0, 0, 0, 0.18) 47%,
-        rgba(0, 0, 0, 0.82) 58%,
-        #000 70%
-    );
+    -webkit-mask-image: radial-gradient(circle at center,
+            transparent 0%,
+            transparent 34%,
+            rgba(0, 0, 0, 0.18) 47%,
+            rgba(0, 0, 0, 0.82) 58%,
+            #000 70%);
+    mask-image: radial-gradient(circle at center,
+            transparent 0%,
+            transparent 34%,
+            rgba(0, 0, 0, 0.18) 47%,
+            rgba(0, 0, 0, 0.82) 58%,
+            #000 70%);
 }
 
 .home-page::after {
@@ -108,13 +104,11 @@ onBeforeUnmount(() => {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(
-        180deg,
-        rgba(5, 32, 17, 0.08) 0%,
-        rgba(255, 255, 255, 0) 28%,
-        rgba(255, 255, 255, 0) 70%,
-        rgba(5, 32, 17, 0.12) 100%
-    );
+    background: linear-gradient(180deg,
+            rgba(5, 32, 17, 0.08) 0%,
+            rgba(255, 255, 255, 0) 28%,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(5, 32, 17, 0.12) 100%);
     pointer-events: none;
 }
 
@@ -171,14 +165,12 @@ onBeforeUnmount(() => {
     transform: translate(-50%, -50%);
     z-index: -1;
     border-radius: 50%;
-    background: radial-gradient(
-        circle at center,
-        rgba(255, 255, 255, 0.72) 0%,
-        rgba(245, 252, 255, 0.58) 34%,
-        rgba(235, 249, 255, 0.32) 56%,
-        rgba(235, 249, 255, 0.12) 74%,
-        rgba(235, 249, 255, 0) 92%
-    );
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(245, 252, 255, 0.58) 34%,
+            rgba(235, 249, 255, 0.32) 56%,
+            rgba(235, 249, 255, 0.12) 74%,
+            rgba(235, 249, 255, 0) 92%);
     filter: blur(18px);
 }
 
@@ -208,20 +200,16 @@ onBeforeUnmount(() => {
     box-shadow:
         0 0 24px 10px rgba(255, 255, 255, 0.32),
         0 12px 28px rgba(42, 112, 156, 0.12);
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        #000 0%,
-        #000 54%,
-        rgba(0, 0, 0, 0.72) 70%,
-        transparent 100%
-    );
-    mask-image: radial-gradient(
-        ellipse at center,
-        #000 0%,
-        #000 54%,
-        rgba(0, 0, 0, 0.72) 70%,
-        transparent 100%
-    );
+    -webkit-mask-image: radial-gradient(ellipse at center,
+            #000 0%,
+            #000 54%,
+            rgba(0, 0, 0, 0.72) 70%,
+            transparent 100%);
+    mask-image: radial-gradient(ellipse at center,
+            #000 0%,
+            #000 50%,
+            rgba(0, 0, 0, 0.6)70%,
+            transparent 100%);
 }
 
 .avatar-frame img {
@@ -336,6 +324,11 @@ onBeforeUnmount(() => {
     .avatar-frame {
         width: min(70%, 360px);
         height: 108px;
+    }
+
+    .avatar-frame img {
+        transform: scale(1.2);
+        object-position: 50% 50%;
     }
 
     .personality {
