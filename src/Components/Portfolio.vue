@@ -72,6 +72,7 @@ const emit = defineEmits(['view-detail'])
 .card-title-row {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 4px;
 }
 
@@ -155,21 +156,14 @@ const emit = defineEmits(['view-detail'])
         justify-content: flex-start;
     }
 
-    .card-title-row {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-    }
-
     .card-title {
         color: rgba(255, 255, 255, 0.95);
         font-size: 1.1rem;
-        flex-shrink: 0;
     }
 
     .card-tags {
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .card-desc {
