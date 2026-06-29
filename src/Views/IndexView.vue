@@ -7,8 +7,8 @@ import profileHero from '@/assets/Image/profile-portrait.jpg'
 import homeBackground from '@/assets/Image/home-background.jpg'
 
 const introLines = [
-    '把任務做到位，把問題想清楚，',
-    '持續用前端與 AI 工具創造更好的使用體驗。'
+    '把任務做到位，用創意找方法，',
+    '持續致力於使用者更好的體驗。'
 ]
 const parallaxY = ref(0)
 
@@ -334,7 +334,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 460px) {
     .avatar-frame {
-        width: min(100%, 420px);
+        width: min(70%, 360px);
         height: 108px;
     }
 
