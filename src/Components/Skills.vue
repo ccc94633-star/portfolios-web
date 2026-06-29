@@ -18,21 +18,27 @@ defineProps({ item: Object })
     flex-direction: column;
     gap: 8px;
     align-items: center;
-    border-radius: 10px;
-    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    border: 1px solid rgba(104, 190, 229, 0.42);
     padding: 16px 12px;
     width: 100%;
-    background: var(--color-surface-muted);
-    transition: border-color 0.2s;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 10px 24px rgba(38, 53, 28, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    border-color: var(--color-primary);
-    background: var(--color-accent-soft);
+    transform: translateY(-3px);
+    border-color: rgba(159, 189, 111, 0.78);
+    background: rgba(237, 245, 216, 0.58);
+    box-shadow: 0 16px 34px rgba(63, 85, 41, 0.16);
+    -webkit-backdrop-filter: blur(14px) saturate(1.16);
+    backdrop-filter: blur(14px) saturate(1.16);
 }
 
 .skill-icon {
     height: 56px;
+    filter: drop-shadow(0 6px 10px rgba(38, 53, 28, 0.08));
 }
 
 .skill-name {
@@ -43,7 +49,7 @@ defineProps({ item: Object })
 }
 
 .star {
-    color: var(--color-border);
+    color: rgba(63, 85, 41, 0.22);
     font-size: 1rem;
 }
 

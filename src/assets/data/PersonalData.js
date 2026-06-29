@@ -20,6 +20,7 @@ import helpIcon from '@/assets/Image/icon/personality/personality-help.svg'
 import psIcon from '@/assets/Image/icon/skills/photoshop.svg'
 import figmaIcon from '@/assets/Image/icon/skills/figma.svg'
 import rwdIcon from '@/assets/Image/icon/skills/rwd.svg'
+import apiIcon from '@/assets/Image/icon/skills/api.svg'
 import qingshuiVeterans from '@/assets/Image/portfolio/qingshuiVeterans.png'
 import weatherImg from '@/assets/Image/portfolio/weather-card.png'
 import workFlowImg from '@/assets/Image/portfolio/aiworkflow.png'
@@ -46,12 +47,24 @@ const personal = {
         { icon: figmaIcon, name: 'Figma', rating: 4 },
         { icon: rwdIcon, name: 'RWD', rating: 5 },
         { icon: psIcon, name: 'PS', rating: 4 },
+        { icon: apiIcon, name: 'API', rating: 4 },
     ],
 
     portfolios:
         [
             {
                 id: 1,
+                image: workFlowImg,
+                title: '我的AI工具書',
+                shortDesc: '把一個個 AI 想法，做成溫柔好用的小工具。',
+                tags: ['vue.js', 'css',  'API'],
+                desc: 'FlowSmith 是我放置 AI workflow 與 AI 小工具的作品總集。每個工具都從一個明確需求出發， 練習把輸入、Prompt、AI 回應與介面整理成完整流程。',
+                gitHubUrl: 'https://github.com/ccc94633-star/flowsmith',
+                demoUrl: 'https://flowsmith-gules.vercel.app/'
+            },
+
+            {
+                id: 2,
                 image: movieTheaterImg,
                 title: '雯子的電影院',
                 shortDesc: '裡面放著我看過並推薦的電影',
@@ -62,7 +75,7 @@ const personal = {
             },
 
             {
-                id: 2,
+                id: 3,
                 image: qingshuiVeterans,
                 title: '清水眷村文化園區',
                 shortDesc: '將清水眷村的官網改版的作品',
@@ -70,17 +83,6 @@ const personal = {
                 desc: '經過分析後，針對原網站的痛點進行改版，提升使用者閱讀體驗之餘，也加強了查找活動的篩選功能等UX功能。',
                 gitHubUrl: 'https://github.com/Digi-Pack/NCHU-11503-QingshuiArtvillage',
                 demoUrl: 'https://nchu-11503-qingshui-qrt-village.pages.dev/'
-            },
-
-            {
-                id: 3,
-                image: workFlowImg,
-                title: '我的AI工具書',
-                shortDesc: '把一個個 AI 想法，做成溫柔好用的小工具。',
-                tags: ['vue.js', 'css',  'API'],
-                desc: 'FlowSmith 是我放置 AI workflow 與 AI 小工具的作品總集。每個工具都從一個明確需求出發， 練習把輸入、Prompt、AI 回應與介面整理成完整流程。',
-                gitHubUrl: 'https://github.com/ccc94633-star/flowsmith',
-                demoUrl: 'https://flowsmith-gules.vercel.app/'
             },
 
             {

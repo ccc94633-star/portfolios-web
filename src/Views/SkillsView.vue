@@ -1,58 +1,65 @@
 <script setup>
-import Nav from '@/Components/Nav.vue';
-import Skills from '@/Components/Skills.vue';
-import personal from '@/assets/data/PersonalData';
+import Nav from '@/Components/Nav.vue'
+import Skills from '@/Components/Skills.vue'
+import personal from '@/assets/data/PersonalData'
+import skillsBackground from '@/assets/Image/home-background.jpg'
 </script>
 
 <template>
-    <Nav />
-    <div class="page-body">
-        <h2 class="page-title">技能</h2>
-        <main class="skills-container">
-            <Skills v-for="skill in personal.skills" :key="skill.name" :item="skill" />
+    <div class="skills-page scenic-page" :style="{ '--scenic-bg': `url(${skillsBackground})`, '--scenic-bg-position': 'bottom' }">
+        <div class="scenic-bg-layer scenic-sky-layer" aria-hidden="true"></div>
+        <div class="scenic-bg-layer scenic-leaf-layer" aria-hidden="true"></div>
+        <Nav />
+        <main class="skills-main scenic-main">
+            <section class="skills-panel scenic-panel">
+                <p class="section-label scenic-section-label">SKILLS</p>
+                <h2 class="page-title scenic-page-title">技能</h2>
+                <div class="skills-container">
+                    <Skills v-for="skill in personal.skills" :key="skill.name" :item="skill" />
+                </div>
+            </section>
         </main>
     </div>
 </template>
 
 <style scoped>
-.page-body {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 40px 24px;
+.skills-main {
+    display: grid;
+    place-items: center;
+}
+
+.skills-panel {
+    width: min(100%, 920px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.section-label {
+    text-align: center;
 }
 
 .page-title {
-    color: var(--color-primary-dark);
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    padding-bottom: 10px;
-    margin-bottom: 24px;
-    border-bottom: 3px solid var(--color-accent);
+    text-align: center;
 }
 
 .skills-container {
-    background: var(--color-surface);
-    border: 1px solid var(--color-primary-border);
-    border-top: 5px solid var(--color-primary);
-    border-radius: 16px;
-    box-shadow: var(--shadow-card);
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    justify-items: center;
-    padding: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
 }
 
-@media (max-width: 600px) {
-    .page-body {
-        padding: 24px 16px;
-    }
-
+@media (max-width: 720px) {
     .skills-container {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 16px;
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 440px) {
+    .skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 </style>

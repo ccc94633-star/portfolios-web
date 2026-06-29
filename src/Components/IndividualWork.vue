@@ -44,18 +44,21 @@ defineProps({ item: Object })
     margin-bottom: 16px;
     padding: 7px 14px;
     border-radius: 8px;
-    border: 1px solid var(--color-primary);
-    background-color: var(--color-accent);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.52);
     color: var(--color-primary-dark);
     text-decoration: none;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 800;
     letter-spacing: 0.02em;
-    transition: opacity 0.2s;
+    box-shadow: 0 8px 18px rgba(42, 112, 156, 0.1);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .back-btn:hover {
-    opacity: 0.75;
+    transform: translateY(-2px);
+    background: rgba(255, 244, 175, 0.86);
 }
 
 .individual-work-card {
@@ -63,11 +66,12 @@ defineProps({ item: Object })
     flex-direction: column;
     gap: 12px;
     align-items: center;
-    border-radius: 16px;
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    box-shadow: var(--shadow-card);
+    border-radius: 8px;
+    border: 2px solid rgba(104, 190, 229, 0.38);
+    background: rgba(255, 255, 255, 0.66);
+    box-shadow: 0 22px 60px rgba(38, 53, 28, 0.14);
     padding: 28px 24px;
+    backdrop-filter: blur(4px);
 }
 
 .individual-work-card img {
@@ -100,7 +104,7 @@ h3 {
 .tag {
     background-color: var(--color-accent-soft);
     color: var(--color-primary-dark);
-    border: 1px solid var(--color-accent);
+    border: 1px solid rgba(207, 138, 19, 0.42);
     border-radius: 20px;
     padding: 3px 12px;
     font-size: 0.78rem;
@@ -127,14 +131,16 @@ h3 {
     gap: 6px;
     padding: 7px 16px;
     border-radius: 8px;
+    border: 1px solid rgba(255, 244, 175, 0.68);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
-    transition: opacity 0.2s;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .link-btn:hover {
-    opacity: 0.8;
+    transform: translateY(-2px);
+    filter: brightness(1.04);
 }
 
 .github-btn {

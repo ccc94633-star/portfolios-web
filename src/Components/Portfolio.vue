@@ -9,10 +9,12 @@ const emit = defineEmits(['view-detail'])
             <img :src="item.image" :alt="item.title">
         </div>
         <div class="card-body">
-            <div class="card-tags">
-                <span class="tag" v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+            <div class="card-title-row">
+                <span class="card-title">{{ item.title }}</span>
+                <div class="card-tags">
+                    <span class="tag" v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+                </div>
             </div>
-            <span class="card-title">{{ item.title }}</span>
             <p class="card-desc">{{ item.shortDesc }}</p>
             <button class="view-btn">查看作品 →</button>
         </div>
@@ -21,24 +23,28 @@ const emit = defineEmits(['view-detail'])
 
 <style scoped>
 .work-card {
-    position: relative;
-    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: var(--color-primary-dark);
+    height: 160px;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(104, 190, 229, 0.32);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 18px rgba(38, 53, 28, 0.1);
+    backdrop-filter: blur(4px);
 }
 
 .work-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 50px rgba(48, 55, 44, 0.35);
-    z-index: 10;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(38, 53, 28, 0.2);
 }
 
 .card-img-wrap {
-    position: absolute;
-    inset: 0;
+    width: 38%;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 .card-img-wrap img {
@@ -46,44 +52,24 @@ const emit = defineEmits(['view-detail'])
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0.82);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .work-card:hover .card-img-wrap img {
-    filter: brightness(0.45);
-    transform: scale(1.04);
-}
-
-.card-img-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.92) 0%,
-        rgba(0, 0, 0, 0.45) 40%,
-        transparent 100%
-    );
-    transition: background 0.3s ease;
-}
-
-.work-card:hover .card-img-wrap::after {
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 1)   0%,
-        rgba(0, 0, 0, 0.78) 55%,
-        rgba(0, 0, 0, 0.28) 100%
-    );
+    transform: scale(1.06);
 }
 
 .card-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 14px 14px 14px;
-    z-index: 2;
+    flex: 1;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    min-width: 0;
+}
+
+.card-title-row {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -93,17 +79,14 @@ const emit = defineEmits(['view-detail'])
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    margin-bottom: 4px;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.22s ease 0.0s, transform 0.22s ease 0.0s;
 }
 
 .tag {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     padding: 2px 8px;
     border-radius: 20px;
-    background: rgba(248, 197, 50, 0.9);
+    background: rgba(255, 244, 175, 0.96);
+    border: 1px solid rgba(207, 138, 19, 0.34);
     color: var(--color-primary-dark);
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -111,110 +94,94 @@ const emit = defineEmits(['view-detail'])
 }
 
 .card-title {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: 1.06rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
     line-height: 1.3;
-    letter-spacing: 0.02em;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.01em;
 }
 
 .card-desc {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.72);
-    line-height: 1.5;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.22s ease 0.06s, transform 0.22s ease 0.06s;
 }
 
 .view-btn {
-    width: 100%;
-    padding: 7px;
-    background: rgba(255, 255, 255, 0.13);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 5px 14px;
+    background: var(--color-primary);
+    border: 1px solid rgba(63, 85, 41, 0.4);
     border-radius: 6px;
     color: #fff;
-    font-size: 0.73rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 800;
     cursor: pointer;
     font-family: inherit;
     letter-spacing: 0.06em;
-    margin-top: 4px;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: all 0.22s ease 0.12s;
-    backdrop-filter: blur(4px);
-}
-
-.work-card:hover .card-tags,
-.work-card:hover .card-desc,
-.work-card:hover .view-btn {
-    opacity: 1;
-    transform: translateY(0);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .view-btn:hover {
-    background: rgba(255, 255, 255, 0.24);
-    border-color: rgba(255, 255, 255, 0.6);
+    background: var(--color-accent);
+    border-color: var(--color-accent-soft);
+    box-shadow: 0 2px 8px rgba(207, 138, 19, 0.3);
 }
 
 @media (max-width: 600px) {
     .work-card {
-        aspect-ratio: 16 / 11;
+        flex-direction: column;
+        height: auto;
+        background: rgba(22, 32, 14, 0.92);
+        border-color: rgba(80, 120, 50, 0.4);
     }
 
-    .work-card:hover {
-        transform: none;
-        box-shadow: none;
-    }
-
-    .card-img-wrap img,
-    .work-card:hover .card-img-wrap img {
-        filter: brightness(0.48);
-        transform: none;
-    }
-
-    .card-img-wrap::after,
-    .work-card:hover .card-img-wrap::after {
-        background: linear-gradient(
-            to top,
-            rgba(48, 55, 44, 0.96) 0%,
-            rgba(48, 55, 44, 0.62) 55%,
-            rgba(48, 55, 44, 0.12) 100%
-        );
+    .card-img-wrap {
+        width: 100%;
+        height: 200px;
+        flex-shrink: 0;
     }
 
     .card-body {
-        padding: 18px;
-        gap: 7px;
+        padding: 14px 16px 18px;
+        gap: 8px;
+        justify-content: flex-start;
     }
 
-    .card-tags,
-    .card-desc,
-    .view-btn {
-        opacity: 1;
-        transform: none;
+    .card-title-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
     }
 
     .card-title {
-        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .card-tags {
+        justify-content: flex-end;
     }
 
     .card-desc {
-        font-size: 0.82rem;
+        color: rgba(195, 210, 180, 0.82);
     }
 
     .view-btn {
-        padding: 9px;
-        background: var(--color-primary);
-        border-color: rgba(255, 255, 255, 0.42);
+        align-self: stretch;
+        text-align: center;
+        padding: 11px;
+        font-size: 0.82rem;
+        margin-top: 4px;
     }
 }
 </style>
